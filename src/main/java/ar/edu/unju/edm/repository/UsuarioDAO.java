@@ -9,6 +9,6 @@ import ar.edu.unju.edm.model.UsuarioModelo;
 
 @Repository
 public interface UsuarioDAO extends  CrudRepository<UsuarioModelo,Integer>{
-	public Optional<UsuarioModelo> findBynombreUsuario(String nombreUsuario);
+	public Optional<UsuarioModelo> findByNombreusuario(String nombreUsuario);
 
 }

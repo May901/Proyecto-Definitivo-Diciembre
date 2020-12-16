@@ -1,10 +1,11 @@
 package ar.edu.unju.edm.service;
 
-import org.springframework.stereotype.Service;
+import java.util.List;
 
 import ar.edu.unju.edm.model.HabitacionModelo;
-@Service
+
 public interface HabitacionService {
 	public void guardarhabitacion(HabitacionModelo UnaHabitacion);
+	public List<HabitacionModelo> buscarHabitaciones();
 	public void delate (Integer id);
 }

@@ -17,6 +17,7 @@ public class UsuarioController {
 	public String saveUsuarioModelo(UsuarioModelo usuariomodelo, Model modelo) {
 		
 		 UsuarioService.guardarUsuario(usuariomodelo);
-		return "formulario";
+		 return "reserva";
+
 	}
 }

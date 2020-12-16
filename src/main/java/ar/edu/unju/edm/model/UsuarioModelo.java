@@ -9,7 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import org.hibernate.annotations.GenericGenerator;
-
+import org.springframework.stereotype.Component;
+@Component
 @Entity
 public class UsuarioModelo implements Serializable{
 	
@@ -29,12 +30,14 @@ private static final long serialVersionUID = 1L;
 	private String nombreusuario;
 	@Column
 	private String apellido;
+	@Column
+	private String tipo;
 	
 	public UsuarioModelo() {
 
 	}
 
-	public UsuarioModelo(long dni, String password, String nombreusuario, String apellido, String nombre,Integer IdUsuario) {
+	public UsuarioModelo(long dni, String password, String nombreusuario, String apellido, String nombre,Integer IdUsuario, String tipo) {
 		super();
 		this.dni = dni;
 		this.nombre= nombre;
@@ -42,6 +45,7 @@ private static final long serialVersionUID = 1L;
 		this.nombreusuario = nombreusuario;
 		this.apellido = apellido;
 		this.IdUsuario= IdUsuario;
+		this.tipo=tipo;
 	}
 	
 	public String getNombre() {
@@ -90,5 +94,14 @@ private static final long serialVersionUID = 1L;
 	public void setIdUsuario(Integer idUsuario) {
 		IdUsuario = idUsuario;
 	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+	
 	
 }

@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import ar.edu.unju.edm.model.HabitacionModelo;
 import ar.edu.unju.edm.service.HabitacionService;
 @Controller
-@RequestMapping("habitacion")
+@RequestMapping("/habitacion")
 public class HabitacionController {
 @Autowired
-HabitacionService HabitacionService;
- 		@PostMapping("/saveHabitacionModelO")
+HabitacionService habitacionService;
+ 		@PostMapping("/saveHabitacionModelo")
  		public String saveHabitacionModelo(HabitacionModelo habitacionmodelo, Model modelo) {
- 			HabitacionService.guardarhabitacion(habitacionmodelo);
- 			return ("habitacion");
+ 			habitacionService.guardarhabitacion(habitacionmodelo);
+ 			return ("listadoreserva");
  		}
 }

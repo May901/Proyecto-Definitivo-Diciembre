@@ -13,18 +13,19 @@
 </head>
 <body>
 
-<form class="login-form">
+<form class="login-form" th:object=${usuarioD} th:action="@{/login}"
+				method="post">
   <p class="login-text">
     <span class="fa-stack fa-lg">
       <i class="fa fa-circle fa-stack-2x"></i>
       <i class="fa fa-lock fa-stack-1x"></i>
     </span>
   </p>
-  <input type="email" class="login-username" required placeholder="Usuario" />
-  <input type="password" class="login-password" required placeholder="Contraseña" />
+  <input type="text" class="login-username" required placeholder="Usuario" name="username" />
+  <input type="password" class="login-password" required placeholder="Contraseña" name="password" maxlength="10"/>
   <input type="submit" name="Login" value="Login" class="login-submit" />
 </form>
-<a href="file:///C:/Users/mayra/Documents/Pv%20Proyecto%20diciembre/Martinez_EDM_Diciembre/src/main/resources/templates/formularioNewusername.html" class="login-newusername">Crear Usuario</a>
+<a href="file:///C:/Users/mayra/Documents/Pv%20Proyecto%20diciembre/Martinez_EDM_Diciembre_Final/src/main/resources/templates/formulario.html" class="login-newusername">Crear Usuario</a>
 <div class="underlay-photo"></div>
 <div class="underlay-black"></div> 
 
